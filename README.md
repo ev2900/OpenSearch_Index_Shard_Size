@@ -1,1 +1,1 @@
-# OpenSearch_Index_Shard_Size
+# OpenSearch Index Shard Size
