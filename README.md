@@ -7,6 +7,6 @@ The number of primary shards is configured when an index is created. The number 
 
 The number of replicate shards for an existing index can be adjusted using the index setting API. 
 
-# Adjust # of Primary Shards for an Existing Index 
+## Adjust # of Primary Shards for an Existing Index 
 
-# Adjust # of Replicate Shards for an Existing Index
+## Adjust # of Replicate Shards for an Existing Index
