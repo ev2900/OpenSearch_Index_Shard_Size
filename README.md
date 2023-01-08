@@ -82,4 +82,4 @@ PUT sample-data-1-1/_settings
 
 will reduce the number replicate shards from 1 to 0. Running ```GET _cat/shards/sample-data-1-1?v``` can confirm
 
-
+<img width="800" alt="cat_indicies_1" src="https://github.com/ev2900/OpenSearch_Index_Shard_Size/blob/main/README/cat_shards_3.png">
