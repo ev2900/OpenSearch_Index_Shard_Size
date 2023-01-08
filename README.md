@@ -7,7 +7,7 @@ The number of primary shards is configured when an index is created. The number 
 
 The number of replicate shards for an index can be easily adjusted using the index setting API. 
 
-OpenSearch has an ideal shard size. 10 - 50 GB per shard is recommended. 10 - 30 GB per shard is prefered for application search / read heavy work loads. 30 - 50 GB is preferred for write heavy workloads such as log analytics. 
+OpenSearch has an ideal shard size of 10 - 50 GB per shard is recommended. 10 - 30 GB per shard is prefered for application search / read heavy work loads. 30 - 50 GB is preferred for write heavy workloads such as log analytics. 
 
 Having too many small shards can be an issue. Meta-data for a shard is stored in the JVM heap memory. If you have to many small shards you can exhaust memory storing meta-data unnecessarily.
 
@@ -19,6 +19,10 @@ Running ```GET _cat/indices/?v```
 
 <img width="800" alt="cat_indicies_1" src="https://github.com/ev2900/OpenSearch_Index_Shard_Size/blob/main/README/cat_indicies_1.png">
 
-The index *sample-data-5-1* has the Amazon OpenSeach Service default of 5 primay shards and 1 replicate shards (total of 10 shards)
+The index *sample-data-5-1* has a total size less than 1 MB. Yet the index has the Amazon OpenSeach Service default of 5 primary shards and 1 replicate (total of 10 shards). Given the ideal shard size of 10 - 50 GB per shard the shards for this index are probably too small
+
+Running ```GET _cat/shards/sample-data-5-1?v```
+
+
 
 ## Adjust # of Replicate Shards for an Existing Index
