@@ -7,6 +7,11 @@ The number of primary shards is configured when an index is created. The number 
 
 The number of replicate shards for an existing index can be adjusted using the index setting API. 
 
-## Adjust # of Primary Shards for an Existing Index 
+## Adjust # of Primary Shards for an Existing Index
+
+Running ```GET _cat/indices/?v``` 
+
+
+The index *sample-data-5-1* has the Amazon OpenSeach Service default of 5 primay shards and 1 replicate shards (total of 10 shards)
 
 ## Adjust # of Replicate Shards for an Existing Index
