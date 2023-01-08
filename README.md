@@ -13,7 +13,7 @@ Having too many small shards can be an issue. Meta-data for a shard is stored in
 
 In the example below. I will illustrate a small an index that has too many shards allocated to it. I will demonstrate how to reduce both the number of primary and replica shards.
 
-## Adjust # of Primary Shards for an Existing Index
+## View the # Shards, Size ... for an Existing Index
 
 Running ```GET _cat/indices/?v``` 
 
@@ -23,6 +23,42 @@ The index *sample-data-5-1* has a total size less than 1 MB. Yet the index has t
 
 Running ```GET _cat/shards/sample-data-5-1?v```
 
+<img width="800" alt="cat_indicies_1" src="https://github.com/ev2900/OpenSearch_Index_Shard_Size/blob/main/README/cat_shards_1.png">
 
+The size of the the shards that are part of the index *sample-data-5-1* is clear. The size of each shard is small. Lets reduce the number of shards for the *sample-data-5-1* index from 5 to 1
+
+## Adjust # of Primary Shards for an Existing Index
+
+The number of primary shards is configured when an index is created. To adjust the number of shards we need to create a new index with the desired number of shards and use the reindex API to copy data from the old index to the new.
+
+To create the new index with the desired number of shards
+
+```
+PUT sample-data-1-1 
+{
+  "settings": {
+    "index": {
+      "number_of_shards": 1,
+      "number_of_replicas": 1
+    }
+  }
+}
+```
+
+To copy data from the old index (*sample-data-5-1*) to the new index (*sample-data-1-1*)
+
+```
+POST _reindex
+{
+  "source": {
+    "index": "sample-data-5-1"
+  },
+  "dest": {
+    "index": "sample-data-1-1"
+  }
+}
+```
+
+We can then comfirm the *sample-data-1-1* has fewer shards by running ```GET _cat/shards/sample-data-1-1?v```
 
 ## Adjust # of Replicate Shards for an Existing Index
