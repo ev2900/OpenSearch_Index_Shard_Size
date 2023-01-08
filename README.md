@@ -66,3 +66,20 @@ We can then confirm the *sample-data-1-1* has fewer shards by running ```GET _ca
 If desired the old index (*sample-data-5-1*) can be deleted via. ```DELETE sample-data-5-1```
 
 ## Adjust # of Replicate Shards for an Existing Index
+
+The number of replicate shards for an index can be easily adjusted using the index setting API. Adjusting the replicate shards does NOT require creating a new index and copying data. 
+
+Running
+
+```
+PUT sample-data-1-1/_settings
+{
+  "index" : {
+    "number_of_replicas": 0
+  }
+}
+```
+
+will reduce the number replicate shards from 1 to 0. Running ```GET _cat/shards/sample-data-1-1?v``` can confirm
+
+
