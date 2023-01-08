@@ -25,7 +25,7 @@ Running ```GET _cat/shards/sample-data-5-1?v```
 
 <img width="800" alt="cat_indicies_1" src="https://github.com/ev2900/OpenSearch_Index_Shard_Size/blob/main/README/cat_shards_1.png">
 
-The size of the the shards that are part of the index *sample-data-5-1* is clear. The size of each shard is small. Lets reduce the number of shards for the *sample-data-5-1* index from 5 to 1
+The size of the shards that are part of the index *sample-data-5-1* is clear. The size of each shard is small. Let's reduce the number of shards for the *sample-data-5-1* index from 5 to 1
 
 ## Adjust # of Primary Shards for an Existing Index
 
@@ -59,7 +59,7 @@ POST _reindex
 }
 ```
 
-We can then comfirm the *sample-data-1-1* has fewer shards by running ```GET _cat/shards/sample-data-1-1?v```
+We can then confirm the *sample-data-1-1* has fewer shards by running ```GET _cat/shards/sample-data-1-1?v```
 
 <img width="800" alt="cat_indicies_1" src="https://github.com/ev2900/OpenSearch_Index_Shard_Size/blob/main/README/cat_shards_2.png">
 
