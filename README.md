@@ -61,4 +61,8 @@ POST _reindex
 
 We can then comfirm the *sample-data-1-1* has fewer shards by running ```GET _cat/shards/sample-data-1-1?v```
 
+<img width="800" alt="cat_indicies_1" src="https://github.com/ev2900/OpenSearch_Index_Shard_Size/blob/main/README/cat_shards_2.png">
+
+If desired the old index (*sample-data-5-1*) can be deleted via. ```DELETE sample-data-5-1```
+
 ## Adjust # of Replicate Shards for an Existing Index
