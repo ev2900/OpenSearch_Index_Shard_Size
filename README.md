@@ -1,4 +1,11 @@
 # OpenSearch Index Shard Size
+
+If you prefer to watch a video instead of reading the instructions below, check out the link below
+
+YouTube video - https://youtu.be/xadv93LlbY4
+
+## Overview
+
 An index is composed of shards. There are two types of shards primary and replica shards. Each document in an index belongs to one primary shard. A replica shard is a copy of a primary shard. Each primary shard belongs to 1 data node.
 
 When an index is created in Amazon OpenSearch service it defaults to 5 primary shards and 1 replica (total of 10 shards). This behavior differs from open source OpenSearch, which defaults to 1 primary and 1 replica shard (total of 2 shards). 
