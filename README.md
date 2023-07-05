@@ -66,7 +66,9 @@ POST _reindex
 }
 ```
 
-We can then confirm the *sample-data-1-1* has fewer shards by running ```GET _cat/shards/sample-data-1-1?v```
+*Note* before reindexing or copying data from the old index to the new index you may consider setting the old index to read only. This will ensure that no new data is written to the old index during the copy. For information on how to set an index to read only reference [OpenSearch_Read_Only_Index](https://github.com/ev2900/OpenSearch_Read_Only_Index) 
+
+We can confirm the *sample-data-1-1* has fewer shards by running ```GET _cat/shards/sample-data-1-1?v```
 
 <img width="800" alt="cat_indicies_1" src="https://github.com/ev2900/OpenSearch_Index_Shard_Size/blob/main/README/cat_shards_2.png">
 
