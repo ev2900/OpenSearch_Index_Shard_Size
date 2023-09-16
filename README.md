@@ -4,6 +4,8 @@ If you prefer to watch a video instead of reading the instructions below, check 
 
 YouTube video - https://youtu.be/xadv93LlbY4
 
+Blog post - https://opensearch.org/blog/optimize-opensearch-index-shard-size/
+
 ## Overview
 
 An index is composed of shards. There are two types of shards primary and replica shards. Each document in an index belongs to one primary shard. A replica shard is a copy of a primary shard. Each primary shard belongs to 1 data node.
