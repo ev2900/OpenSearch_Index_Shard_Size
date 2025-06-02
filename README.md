@@ -1,6 +1,6 @@
 # OpenSearch Index Shard Size
 
-<img width="85" alt="map-user" src="https://img.shields.io/badge/views-2538-green"> <img width="125" alt="map-user" src="https://img.shields.io/badge/unique visits-1702-green">
+<img width="85" alt="map-user" src="https://img.shields.io/badge/views-2553-green"> <img width="125" alt="map-user" src="https://img.shields.io/badge/unique visits-1702-green">
 
 If you prefer to watch a video instead of reading the instructions below, check out the link below
 
